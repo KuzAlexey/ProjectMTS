@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+    <h1>Личный кабинет</h1>
+    <hr></hr>
+    <table>
+    <tr><td>Имя пользователя</td><td>{{ user.username }}</td></tr> 
+    <tr><td>Ник в Telegram</td><td>{{ user.tg }}</td></tr>
+    <!-- <tr><td>Заряд</td><td>{{user.power}}</td></tr> -->
+    </table>
+    <p class="message"><a href="{{ url_for('logout') }}">Выйти</a></p>
+
+</body>
+</html>

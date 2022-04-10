@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Вход</title>
+  <link rel="stylesheet" href="../static/style.css">
+
+</head> 
+<body>
+
+  <div class="login-page">
+    <div class="form">
+      <form class="login-form" method="post">
+        {{ form.hidden_tag() }}
+        Имя пользователя <br>
+          {{ form.username(size=32) }}<br>
+        Пароль <br>
+            {{ form.password(size=32) }}<br>
+        <!-- <button>войти</button> -->
+        <p>{{ form.submit() }} </p>
+        <p class="message">Не зарегестрирован? <a href="{{ url_for('register') }}">Создать аккаунт</a></p>
+      </form>
+    </div>
+  </div>
+
+</html>
